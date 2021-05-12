@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1.0.0
     - name: Apply Issue Triage Label
-      uses: actions/github-script@v3
+      uses: actions/github-script@v4.0.2
       if: github.event.action == 'opened' && !contains(fromJSON('["anGie44", "bflad", "breathingdust", "DrFaust92", "ewbankkit", "gdavison", "maryelizbeth", "YakDriver"]'), github.actor)
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
